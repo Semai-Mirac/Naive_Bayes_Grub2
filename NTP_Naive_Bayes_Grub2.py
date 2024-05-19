@@ -1,4 +1,4 @@
-# Made by Ömer Avcı XD
+# Made by Ömer Avcı XD Semai Miraç Arıcı Yunus Emre Çağan Buğra Karaahmetoğlu Sümeyye Üstünsoy
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -17,7 +17,7 @@ y = data['Class']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 #-------------------------------------
-# Bernoulli Naive Bayes sınıflandırıcı
+# Bernoulli Naive Bayes sınıflandırıcı =Multinominal naive bayes'e benzer şekil veriyor. ancak tahminler sadece boolean(ikili) şeklindedir.
 
 bnb_classifier = BernoulliNB(binarize=5)
 bnb_classifier.fit(X_train, y_train)
@@ -44,7 +44,7 @@ plt.ylabel('True')
 plt.title('Bernoulli Confusion Matrix')
 
 #------------------------------------
-# Guassian Naive Bayes sınıflandırıcı
+# Guassian Naive Bayes sınıflandırıcı = Bu yöntem eğitim verisinden her sınıf için ortalama(mean) ve standart sapma(standart deviation) değerleri tahmin edilir. Bu sayede dağılım Özetlenir.Gaussian Naive Bayes algoritmasında her sınıfın olasılıklarına ek olarak her sınıfın ortalama ve standart sapma değerleri de saklanır.
 
 gnb_classifier = GaussianNB()
 gnb_classifier.fit(X_train, y_train)
@@ -71,7 +71,7 @@ plt.title('Guassian Confusion Matrix')
 
 
 #------------------------------------
-# Multinomial Naive Bayes sınıflandırıcı
+# Multinomial Naive Bayes sınıflandırıcı = Multinomial naive Bayes'in sıklıkla kullanıldığı önemli bir alan, özelliklerin sınıflandırılacak belgelerdeki kelime sayımları veya frekansları ile ilişkili olduğu metin sınıflandırmasıdır.
 
 mnb_classifier = MultinomialNB()
 mnb_classifier.fit(X_train, y_train)
